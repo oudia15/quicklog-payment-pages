@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Cancelled - QuickLog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .cancel-icon {
+            width: 80px;
+            height: 80px;
+            background: #FF9500;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .cancel-icon::after {
+            content: '✕';
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 28px;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 32px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007AFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 24px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .button:hover {
+            background: #0051D5;
+        }
+        
+        .button-secondary {
+            background: transparent;
+            color: #007AFF;
+            border: 2px solid #007AFF;
+            margin-left: 12px;
+        }
+        
+        .button-secondary:hover {
+            background: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cancel-icon"></div>
+        <h1>Payment Cancelled</h1>
+        <p>Your payment was cancelled. No charges were made.</p>
+        
+        <div style="margin-top: 32px;">
+            <a href="quicklog://subscription/cancel" class="button" id="app-link">Return to App</a>
+            <a href="javascript:void(0)" class="button button-secondary" onclick="window.close()">Close</a>
+        </div>
+    </div>
+
+    <script>
+        // Try to redirect to app
+        function redirectToApp() {
+            const appScheme = 'quicklog://subscription/cancel';
+            window.location.href = appScheme;
+        }
+
+        // Handle clicks on the app link
+        document.getElementById('app-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            redirectToApp();
+        });
+    </script>
+</body>
+</html>
+

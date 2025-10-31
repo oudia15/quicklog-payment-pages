@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - QuickLog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #34C759;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .success-icon::after {
+            content: '✓';
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 28px;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 32px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #007AFF;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .redirect-text {
+            color: #999;
+            font-size: 14px;
+            margin-top: 16px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007AFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 24px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .button:hover {
+            background: #0051D5;
+        }
+        
+        .button-secondary {
+            background: transparent;
+            color: #007AFF;
+            border: 2px solid #007AFF;
+            margin-left: 12px;
+        }
+        
+        .button-secondary:hover {
+            background: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon"></div>
+        <h1>Payment Successful!</h1>
+        <p>Thank you for your purchase. Your subscription has been activated.</p>
+        
+        <div class="spinner" id="spinner"></div>
+        <p class="redirect-text" id="redirect-text">Redirecting to app...</p>
+        
+        <div style="margin-top: 32px;">
+            <a href="quicklog://subscription/success" class="button" id="app-link">Open in App</a>
+            <a href="javascript:void(0)" class="button button-secondary" onclick="window.close()">Close</a>
+        </div>
+    </div>
+
+    <script>
+        // Try to redirect to app immediately
+        function redirectToApp() {
+            const appScheme = 'quicklog://subscription/success';
+            
+            // Try to open the app
+            window.location.href = appScheme;
+            
+            // If app doesn't open within 2 seconds, show manual link
+            setTimeout(() => {
+                document.getElementById('spinner').style.display = 'none';
+                document.getElementById('redirect-text').textContent = 'If the app didn\'t open automatically, click "Open in App" above.';
+            }, 2000);
+        }
+
+        // Try redirect on page load
+        window.onload = function() {
+            // Small delay to ensure page is fully loaded
+            setTimeout(redirectToApp, 500);
+        };
+
+        // Handle clicks on the app link
+        document.getElementById('app-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            redirectToApp();
+        });
+
+        // Fallback: If page is still open after 5 seconds, hide spinner
+        setTimeout(() => {
+            document.getElementById('spinner').style.display = 'none';
+            document.getElementById('redirect-text').textContent = 'Click "Open in App" to continue.';
+        }, 5000);
+    </script>
+</body>
+</html>
+
