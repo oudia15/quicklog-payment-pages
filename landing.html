@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>QuickLog - Construction Site Compliance & Reporting App | OSHA Compliance Made Easy</title>
+    <meta name="title" content="QuickLog - Construction Site Compliance & Reporting App | OSHA Compliance Made Easy">
+    <meta name="description" content="Transform construction site management with QuickLog. Streamline daily reporting, ensure OSHA compliance, and document site conditions with AI-powered voice reporting, photo geotagging, and automated compliance checks. Built for site supervisors and project managers.">
+    <meta name="keywords" content="construction site management, OSHA compliance, construction reporting, site supervisor app, construction safety, compliance reporting, construction documentation, AI compliance checks, construction site app, construction project management">
+    <meta name="author" content="QuickLog">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://quicklog.org/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quicklog.org/">
+    <meta property="og:title" content="QuickLog - Transform Construction Site Management">
+    <meta property="og:description" content="The Ultimate Construction Site Compliance & Reporting Solution. Streamline daily reporting, ensure OSHA compliance, and document site conditions effortlessly.">
+    <meta property="og:image" content="https://quicklog.org/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://quicklog.org/">
+    <meta property="twitter:title" content="QuickLog - Transform Construction Site Management">
+    <meta property="twitter:description" content="The Ultimate Construction Site Compliance & Reporting Solution. Streamline daily reporting, ensure OSHA compliance, and document site conditions effortlessly.">
+    <meta property="twitter:image" content="https://quicklog.org/twitter-image.jpg">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "QuickLog",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "QuickLog is an all-in-one mobile app designed for construction site supervisors, project managers, and safety teams to streamline daily reporting, ensure OSHA compliance, and document site conditions with AI-powered features.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "125"
+      },
+      "featureList": [
+        "Hands-Free Voice Reporting",
+        "Photo & GPS Geotagging",
+        "AI-Powered OSHA Compliance Checks",
+        "Customizable Regulatory Database",
+        "Professional PDF & CSV Export",
+        "Multi-State Regulatory Support"
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "QuickLog",
+      "url": "https://quicklog.org",
+      "logo": "https://quicklog.org/logo.png",
+      "description": "Construction site compliance and reporting solution",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "support@quicklog.org"
+      }
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+        
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .section {
+                padding: 80px 40px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .section {
+                padding: 100px 60px;
+            }
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+        
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 48px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 56px;
+            }
+        }
+        
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+        
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h2 {
+                font-size: 42px;
+            }
+        }
+        
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        
+        @media (min-width: 768px) {
+            h3 {
+                font-size: 26px;
+            }
+        }
+        
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+        
+        @media (min-width: 768px) {
+            p {
+                font-size: 18px;
+            }
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #007AFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .button:hover {
+            background: #0051D5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+        
+        .button-secondary {
+            background: transparent;
+            color: #007AFF;
+            border: 2px solid #007AFF;
+        }
+        
+        .button-secondary:hover {
+            background: #f0f8ff;
+            transform: translateY(-2px);
+        }
+        
+        .button-large {
+            padding: 18px 40px;
+            font-size: 18px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @media (min-width: 768px) {
+            .hero {
+                padding: 120px 40px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero {
+                padding: 150px 60px;
+            }
+        }
+        
+        .hero h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .hero .subheadline {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 768px) {
+            .hero .subheadline {
+                font-size: 22px;
+            }
+        }
+        
+        .hero .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        @media (min-width: 768px) {
+            .hero .cta-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .problem h2 {
+            margin-bottom: 32px;
+        }
+        
+        .problem-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Solution Section */
+        .solution {
+            text-align: center;
+        }
+        
+        .solution-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Features Section */
+        .features {
+            background: #f8f9fa;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideIn 0.6s ease-out;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        
+        .feature-card p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        
+        /* Social Proof Section */
+        .social-proof {
+            text-align: center;
+        }
+        
+        .social-proof h2 {
+            margin-bottom: 32px;
+        }
+        
+        .social-proof-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            margin-top: 16px;
+            font-weight: 600;
+            color: #333;
+            font-style: normal;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .final-cta {
+                padding: 100px 40px;
+            }
+        }
+        
+        .final-cta h2 {
+            color: white;
+            margin-bottom: 24px;
+        }
+        
+        .final-cta p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 768px) {
+            .final-cta p {
+                font-size: 20px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Utility classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-0 {
+            margin-bottom: 0;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: #ffffff;
+            text-align: center;
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #007AFF;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-message {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        .form-submit {
+            width: 100%;
+            margin-top: 8px;
+        }
+        
+        .form-loading {
+            display: none;
+            text-align: center;
+            margin-top: 16px;
+        }
+        
+        .form-loading.active {
+            display: block;
+        }
+        
+        .spinner-small {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #007AFF;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="section hero" id="hero">
+        <h1>Transform Construction Site Management with QuickLog</h1>
+        <p class="subheadline">The Ultimate Compliance & Reporting Solution</p>
+        <div class="cta-container">
+            <a href="#register" class="button button-large" aria-label="Join QuickLog Waitlist">Join Waitlist</a>
+            <a href="#register" class="button button-secondary button-large" aria-label="Download QuickLog App">Download App</a>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section problem" id="problem" aria-labelledby="problem-heading">
+        <h2 id="problem-heading">The Challenge</h2>
+        <div class="problem-content">
+            <p>In the fast-paced world of construction, staying compliant with OSHA regulations while maintaining efficient documentation can be a daunting task—especially when you're juggling multiple sites, teams, and deadlines.</p>
+            <p>Every day, site supervisors face the pressure of:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 24px auto; color: #666; line-height: 1.8;">
+                <li>Manually documenting site conditions and safety measures</li>
+                <li>Keeping track of compliance requirements across different states</li>
+                <li>Creating reports while working in the field with dirty hands and limited time</li>
+                <li>Risking costly violations due to missed documentation or overlooked safety issues</li>
+                <li>Spending hours on paperwork instead of focusing on what matters—building safely</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section solution" id="solution" aria-labelledby="solution-heading">
+        <h2 id="solution-heading">Enter QuickLog</h2>
+        <div class="solution-content">
+            <p>QuickLog is the all-in-one mobile app designed specifically for site supervisors, project managers, and safety teams to streamline daily reporting, ensure legal compliance, and document site conditions effortlessly—anytime, anywhere.</p>
+            <p>Efficiency, Compliance, and Peace of Mind—All from Your Phone.</p>
+        </div>
+    </section>
+
+    <!-- Feature Highlights Section -->
+    <section class="section features" id="features" aria-labelledby="features-heading">
+        <h2 id="features-heading">Why Choose QuickLog?</h2>
+        <div class="features-grid">
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🎤</div>
+                <h3>Hands-Free Voice Reporting</h3>
+                <p>Capture daily activities while on-site—no more scribbling notes or typing in field. Speak naturally, review, and update reports in seconds.</p>
+            </article>
+            
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">📷</div>
+                <h3>Photo & Geotagging</h3>
+                <p>Attach real-time, GPS-tagged photos to your reports to provide irrefutable evidence of site conditions and safety measures.</p>
+            </article>
+            
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🤖</div>
+                <h3>AI-Powered Compliance Checks</h3>
+                <p>Leverage cutting-edge AI to analyze reports and photos for potential OSHA violations, delivering scores, violation details, and actionable recommendations instantly.</p>
+            </article>
+            
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">📋</div>
+                <h3>Customizable Regulatory Database</h3>
+                <p>Stay up-to-date with OSHA and state-specific regulations, tailored for California, Texas, Florida, New York, Illinois, and more.</p>
+            </article>
+            
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">📄</div>
+                <h3>Effortless Document Generation</h3>
+                <p>Create professional PDFs and CSV exports for clients, regulators, or internal use—quickly and confidently.</p>
+            </article>
+            
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">💰</div>
+                <h3>Affordable & Scalable</h3>
+                <p>Designed for small crews or large teams, with flexible subscription plans—start with a free trial and scale as you go.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="section social-proof" id="social-proof" aria-labelledby="social-proof-heading">
+        <h2 id="social-proof-heading">Join Early Adopters</h2>
+        <div class="social-proof-content">
+            <p>Join early adopters transforming their construction site management. Simplify compliance, increase safety, and save valuable time with QuickLog—the app built for modern construction professionals.</p>
+            
+            <blockquote class="testimonial" style="margin-top: 40px;">
+                <p>"QuickLog has transformed how we handle compliance reporting. What used to take hours now takes minutes, and we've caught potential issues before they became problems."</p>
+                <p class="testimonial-author">— Site Supervisor, California</p>
+            </blockquote>
+            
+            <blockquote class="testimonial">
+                <p>"The voice reporting feature is a game-changer. I can document everything while I'm walking the site, and the AI catches things I might have missed."</p>
+                <p class="testimonial-author">— Project Manager, Texas</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Email Collection Form Section -->
+    <section class="section form-section" id="register" aria-labelledby="register-heading">
+        <h2 id="register-heading">Get Early Access</h2>
+        <p style="margin-bottom: 32px; color: #666;">Join the waitlist and be among the first to transform your construction site management.</p>
+        <div class="form-container">
+            <form id="waitlist-form" action="https://formspree.io/f/xnnoenwz" method="POST">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        aria-required="true"
+                        placeholder="your@email.com"
+                        autocomplete="email"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="John Doe"
+                        autocomplete="name"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input 
+                        type="text" 
+                        id="company" 
+                        name="company" 
+                        placeholder="ABC Construction"
+                        autocomplete="organization"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="role">Your Role</label>
+                    <select 
+                        id="role" 
+                        name="role"
+                    >
+                        <option value="">Select your role</option>
+                        <option value="site-supervisor">Site Supervisor</option>
+                        <option value="project-manager">Project Manager</option>
+                        <option value="safety-manager">Safety Manager</option>
+                        <option value="owner">Owner</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">How can we help? (Optional)</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Tell us about your construction site management challenges..."
+                    ></textarea>
+                </div>
+                <button type="submit" class="button button-large form-submit" aria-label="Submit waitlist form">
+                    Join Waitlist
+                </button>
+                <div class="form-loading" id="form-loading">
+                    <div class="spinner-small"></div>
+                    <p style="margin-top: 12px; color: #666; font-size: 14px;">Submitting...</p>
+                </div>
+                <div class="form-message" id="form-message" role="alert"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section final-cta" id="final-cta" aria-labelledby="final-cta-heading">
+        <h2 id="final-cta-heading">Get Started Today</h2>
+        <p>Start your free trial and experience the future of construction site management. No credit card required.</p>
+        <div style="margin-top: 40px;">
+            <a href="#register" class="button button-large" style="background: white; color: #007AFF;" aria-label="Get early access to QuickLog">Get Early Access</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #1a1a1a; color: #fff; padding: 40px 20px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="color: #999; font-size: 14px; margin-bottom: 16px;">© 2024 QuickLog. All rights reserved.</p>
+            <p style="color: #999; font-size: 14px;">
+                <a href="mailto:support@quicklog.org" style="color: #007AFF; text-decoration: none;">support@quicklog.org</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple scroll animation for feature cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Formspree form handling
+        const form = document.getElementById('waitlist-form');
+        const formMessage = document.getElementById('form-message');
+        const formLoading = document.getElementById('form-loading');
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Hide previous messages
+            formMessage.className = 'form-message';
+            formMessage.style.display = 'none';
+            formLoading.classList.add('active');
+            submitButton.disabled = true;
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Thank you! We\'ll be in touch soon with early access details.';
+                    formMessage.style.display = 'block';
+                    form.reset();
+                    
+                    // Scroll to message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    const data = await response.json();
+                    throw new Error(data.error || 'Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                formMessage.className = 'form-message error';
+                formMessage.textContent = error.message || 'Something went wrong. Please try again.';
+                formMessage.style.display = 'block';
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } finally {
+                formLoading.classList.remove('active');
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
+
