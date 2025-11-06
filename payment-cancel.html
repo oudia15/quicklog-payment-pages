@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Cancelled - QuickLog</title>
+    <title>Payment Cancelled - BuildLog</title>
     <style>
         * {
             margin: 0;
@@ -119,7 +119,7 @@
         <p>Your payment was cancelled. No charges were made.</p>
         
         <div style="margin-top: 32px;">
-            <a href="quicklog://subscription/cancel" class="button" id="app-link">Return to App</a>
+            <a href="buildlog://subscription/cancel" class="button" id="app-link">Return to App</a>
             <a href="javascript:void(0)" class="button button-secondary" onclick="window.close()">Close</a>
         </div>
     </div>
@@ -127,7 +127,7 @@
     <script>
         // Try to redirect to app
         function redirectToApp() {
-            const appScheme = 'quicklog://subscription/cancel';
+            const appScheme = 'buildlog://subscription/cancel';
             window.location.href = appScheme;
         }
 

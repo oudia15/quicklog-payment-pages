@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Successful - QuickLog</title>
+    <title>Payment Successful - BuildLog</title>
     <style>
         * {
             margin: 0;
@@ -143,7 +143,7 @@
         <p class="redirect-text" id="redirect-text">Redirecting to app...</p>
         
         <div style="margin-top: 32px;">
-            <a href="quicklog://subscription/success" class="button" id="app-link">Open in App</a>
+            <a href="buildlog://subscription/success" class="button" id="app-link">Open in App</a>
             <a href="javascript:void(0)" class="button button-secondary" onclick="window.close()">Close</a>
         </div>
     </div>
@@ -151,7 +151,7 @@
     <script>
         // Try to redirect to app immediately
         function redirectToApp() {
-            const appScheme = 'quicklog://subscription/success';
+            const appScheme = 'buildlog://subscription/success';
             
             // Try to open the app
             window.location.href = appScheme;

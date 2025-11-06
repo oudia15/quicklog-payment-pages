@@ -1,0 +1,36 @@
+Create a modern, professional logo for "BuildLog" - a construction site compliance and reporting mobile app for construction professionals.
+
+DESIGN CONCEPT:
+Combine construction/building elements with technology/digital aesthetics. The logo should show construction meets technology - think blueprint lines with digital overlay, construction tools with tech elements, building structures with modern geometric patterns, or a construction site icon with app/tech styling.
+
+STYLE:
+- Modern, clean, professional design
+- Primary color: #007AFF (bright blue) - represents trust, technology, professionalism
+- Works in both full color and monochrome
+- Scalable and recognizable at very small sizes (16x16px for favicon)
+- Suitable for construction industry professionals who need tech-forward solutions
+
+VISUAL ELEMENTS TO INCLUDE:
+- Construction elements: blueprint, building structures, construction tools, hard hat, clipboard, construction site
+- Technology elements: digital symbols, app icon style, modern geometric shapes, tech grid patterns
+- Combination: Show how construction and technology merge together
+
+MOOD & VALUES:
+Professional, trustworthy, modern, innovative, reliable, efficient, safety-focused
+
+DELIVERABLES NEEDED:
+1. Full logo with "BuildLog" text (horizontal layout) - SVG and PNG (512x512px)
+2. Icon-only version (for app icon and favicon) - SVG and PNG
+3. Monochrome version (single color) - SVG and PNG
+4. Favicon set: 16x16, 32x32, 180x180 (apple-touch-icon) - PNG with transparent background
+5. Social media images: 1200x630px for Open Graph and Twitter cards
+
+TECHNICAL REQUIREMENTS:
+- Vector format (SVG) for scalability
+- High-resolution PNG with transparent background
+- Must be recognizable at 16x16px size
+- Works on both light and dark backgrounds
+- Modern sans-serif typography if including text
+
+The logo should appeal to construction site supervisors, project managers, and safety teams who value efficiency, compliance, and modern technology solutions.
+
