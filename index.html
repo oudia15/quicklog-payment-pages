@@ -260,6 +260,28 @@
             }
         }
         
+        .hero-logo {
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto 32px;
+            display: block;
+            filter: brightness(0) invert(1);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-logo {
+                max-width: 250px;
+                margin-bottom: 40px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-logo {
+                max-width: 300px;
+            }
+        }
+        
         .hero h1 {
             color: white;
             margin-bottom: 20px;
@@ -583,6 +605,7 @@
 <body>
     <!-- Hero Section -->
     <header class="section hero" id="hero">
+        <img src="/images/buildLog-Logo.svg" alt="BuildLog Logo" class="hero-logo">
         <h1>Transform Construction Site Management with BuildLog</h1>
         <p class="subheadline">The Ultimate Compliance & Reporting Solution</p>
         <div class="cta-container">
