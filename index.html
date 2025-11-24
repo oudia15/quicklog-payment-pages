@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://formspree.io" crossorigin>
+    <link rel="dns-prefetch" href="https://formspree.io">
     
     <!-- Primary Meta Tags -->
-    <title>BuildLog — Construction Compliance App for OSHA Reporting</title>
-    <meta name="title" content="BuildLog — Construction Compliance App for OSHA Reporting">
-    <meta name="description" content="BuildLog is the #1 construction compliance app for OSHA compliance reporting. Create compliant daily logs, site reports, and documentation quickly with AI-powered voice reporting and automated compliance checks.">
+    <title>BuildLog — #1 Construction Compliance App for OSHA Reporting (2025)</title>
+    <meta name="title" content="BuildLog — #1 Construction Compliance App for OSHA Reporting (2025)">
+    <meta name="description" content="BuildLog is the construction daily log & OSHA compliance app that lets site supervisors capture voice reports, geotag photos & generate PDF logs in minutes. Try free.">
     <meta name="keywords" content="construction site management, OSHA compliance, construction reporting, site supervisor app, construction safety, compliance reporting, construction documentation, AI compliance checks, construction site app, construction project management">
     <meta name="author" content="BuildLog">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://buildlogapp.com/">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="48x48" href="/images/buildLog-Logo ico 48.png">
+    <!-- Favicon: Optimized loading -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/buildLog-Logo ico 32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/buildLog-Logo ico 16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/buildLog-Logo.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#007AFF">
@@ -24,7 +26,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://buildlogapp.com/">
-    <meta property="og:title" content="BuildLog — Construction Compliance App for OSHA Reporting">
+    <meta property="og:title" content="BuildLog — #1 Construction Compliance App for OSHA Reporting (2025)">
     <meta property="og:description" content="The #1 construction compliance app for OSHA compliance reporting. Create compliant daily logs, site reports, and documentation quickly and easily.">
     <meta property="og:image" content="https://buildlogapp.com/images/buildLog-Logo.png">
     <meta property="og:image:alt" content="BuildLog - Construction Site Compliance & Reporting App">
@@ -34,7 +36,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://buildlogapp.com/">
-    <meta property="twitter:title" content="BuildLog — Construction Compliance App for OSHA Reporting">
+    <meta property="twitter:title" content="BuildLog — #1 Construction Compliance App for OSHA Reporting (2025)">
     <meta property="twitter:description" content="The #1 construction compliance app for OSHA compliance reporting. Create compliant daily logs, site reports, and documentation quickly and easily.">
     <meta property="twitter:image" content="https://buildlogapp.com/images/buildLog-Logo.png">
     <meta property="twitter:image:alt" content="BuildLog - Construction Site Compliance & Reporting App">
@@ -53,7 +55,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "description": "BuildLog is an all-in-one mobile app designed for construction site supervisors, project managers, and safety teams to streamline daily reporting, ensure OSHA compliance, and document site conditions with AI-powered features.",
+      "description": "BuildLog is the construction daily log & OSHA compliance app that lets site supervisors capture voice reports, geotag photos & generate PDF logs in minutes.",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
@@ -100,11 +102,61 @@
       ]
     }
     </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a construction daily log app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A construction daily log app is a mobile application that helps site supervisors and project managers create, manage, and maintain daily logs for construction sites. BuildLog is a construction compliance app that streamlines this process with voice reporting, photo geotagging, and AI-powered compliance checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BuildLog help with OSHA compliance reporting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildLog automates OSHA compliance reporting by providing structured templates, AI-powered compliance checks that identify potential violations, and comprehensive documentation features. The app ensures all required elements are captured, helping you maintain compliant daily logs and site reports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use BuildLog on my phone while on-site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! BuildLog is designed as a mobile-first construction compliance app. You can use voice reporting to document activities hands-free, take GPS-tagged photos, and create daily logs directly from your smartphone—even with dirty hands or while walking the site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes BuildLog different from other construction site reporting apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildLog combines hands-free voice reporting, AI-powered OSHA compliance checks, and photo geotagging in one easy-to-use construction daily log app. Unlike other solutions, BuildLog is specifically designed for on-site use and helps prevent violations before they occur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I export my daily logs as PDFs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! BuildLog generates professional PDF and CSV exports that you can share with clients, regulators, or internal teams. All exports include your photos, GPS coordinates, and compliance documentation in a polished format."
+          }
+        }
+      ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
         }
         
         html {
@@ -116,6 +168,8 @@
             line-height: 1.6;
             color: #333;
             background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .section {
@@ -215,6 +269,8 @@
             border: none;
             cursor: pointer;
             text-align: center;
+            min-height: 44px; /* Mobile touch target size */
+            touch-action: manipulation; /* Prevent double-tap zoom */
         }
         
         .button:hover {
@@ -357,6 +413,7 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: slideIn 0.6s ease-out;
+            will-change: transform; /* Performance hint for animations */
         }
         
         .feature-card:hover {
@@ -610,9 +667,9 @@
 
     <!-- Solution Section -->
     <section class="section solution" id="solution" aria-labelledby="solution-heading">
-        <h2 id="solution-heading">OSHA Compliance Reporting Made Simple</h2>
+        <h2 id="solution-heading">Construction Daily Log App for OSHA Compliance</h2>
         <div class="solution-content">
-            <p>BuildLog is the construction compliance app designed specifically for site supervisors, project managers, and safety teams. Streamline OSHA compliance reporting, create daily logs, and document site conditions effortlessly—anytime, anywhere.</p>
+            <p>BuildLog is the construction compliance app designed specifically for site supervisors, project managers, and safety teams. Streamline your construction site reporting & daily logs with OSHA compliance reporting. Create compliant documentation effortlessly—anytime, anywhere.</p>
             <p>Efficiency, Compliance, and Peace of Mind—All from Your Phone.</p>
         </div>
     </section>
@@ -749,6 +806,37 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section" id="faq" aria-labelledby="faq-heading" style="background: #f8f9fa;">
+        <h2 id="faq-heading" style="text-align: center; margin-bottom: 48px;">Frequently Asked Questions</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a;">What is a construction daily log app?</h3>
+                <p style="color: #666; line-height: 1.7;">A construction daily log app is a mobile application that helps site supervisors and project managers create, manage, and maintain daily logs for construction sites. BuildLog is a construction compliance app that streamlines this process with voice reporting, photo geotagging, and AI-powered compliance checks.</p>
+            </div>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a;">How does BuildLog help with OSHA compliance reporting?</h3>
+                <p style="color: #666; line-height: 1.7;">BuildLog automates OSHA compliance reporting by providing structured templates, AI-powered compliance checks that identify potential violations, and comprehensive documentation features. The app ensures all required elements are captured, helping you maintain compliant daily logs and site reports.</p>
+            </div>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a;">Can I use BuildLog on my phone while on-site?</h3>
+                <p style="color: #666; line-height: 1.7;">Yes! BuildLog is designed as a mobile-first construction compliance app. You can use voice reporting to document activities hands-free, take GPS-tagged photos, and create daily logs directly from your smartphone—even with dirty hands or while walking the site.</p>
+            </div>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a;">What makes BuildLog different from other construction site reporting apps?</h3>
+                <p style="color: #666; line-height: 1.7;">BuildLog combines hands-free voice reporting, AI-powered OSHA compliance checks, and photo geotagging in one easy-to-use construction daily log app. Unlike other solutions, BuildLog is specifically designed for on-site use and helps prevent violations before they occur.</p>
+            </div>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a;">Do I need training to use BuildLog?</h3>
+                <p style="color: #666; line-height: 1.7;">No extensive training required. BuildLog is intuitive and designed for construction professionals. The app guides you through creating daily logs, and voice reporting makes documentation natural. Most users are productive within their first day.</p>
+            </div>
+            <div>
+                <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a;">Can I export my daily logs as PDFs?</h3>
+                <p style="color: #666; line-height: 1.7;">Yes! BuildLog generates professional PDF and CSV exports that you can share with clients, regulators, or internal teams. All exports include your photos, GPS coordinates, and compliance documentation in a polished format.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA Section -->
     <section class="section final-cta" id="final-cta" aria-labelledby="final-cta-heading">
         <h2 id="final-cta-heading">Get Started Today</h2>
@@ -780,6 +868,9 @@
                     <div>
                         <a href="/construction-compliance-software-guide.html" style="color: #999; text-decoration: none; font-size: 14px; display: block; padding: 8px;">Construction Compliance Software Guide</a>
                     </div>
+                    <div>
+                        <a href="/blog/" style="color: #999; text-decoration: none; font-size: 14px; display: block; padding: 8px;">Blog</a>
+                    </div>
                 </div>
             </div>
             <p style="color: #999; font-size: 14px; margin-bottom: 16px;">© 2025 BuildLog. All rights reserved.</p>
@@ -790,93 +881,104 @@
     </footer>
 
     <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Simple scroll animation for feature cards
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe feature cards
-        document.querySelectorAll('.feature-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Formspree form handling
-        const form = document.getElementById('waitlist-form');
-        const formMessage = document.getElementById('form-message');
-        const formLoading = document.getElementById('form-loading');
-        const submitButton = form.querySelector('button[type="submit"]');
-
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Hide previous messages
-            formMessage.className = 'form-message';
-            formMessage.style.display = 'none';
-            formLoading.classList.add('active');
-            submitButton.disabled = true;
-            
-            const formData = new FormData(form);
-            
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
+        // Smooth scroll for anchor links (deferred execution)
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initScripts);
+        } else {
+            initScripts();
+        }
+        
+        function initScripts() {
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
                     }
                 });
-                
-                if (response.ok) {
-                    formMessage.className = 'form-message success';
-                    formMessage.textContent = 'Thank you! We\'ll be in touch soon with early access details.';
-                    formMessage.style.display = 'block';
-                    form.reset();
+            });
+
+            // Simple scroll animation for feature cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe feature cards
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Formspree form handling
+            const form = document.getElementById('waitlist-form');
+            if (form) {
+                const formMessage = document.getElementById('form-message');
+                const formLoading = document.getElementById('form-loading');
+                const submitButton = form.querySelector('button[type="submit"]');
+
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
                     
-                    // Scroll to message
-                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                } else {
-                    const data = await response.json();
-                    throw new Error(data.error || 'Something went wrong. Please try again.');
-                }
-            } catch (error) {
-                formMessage.className = 'form-message error';
-                formMessage.textContent = error.message || 'Something went wrong. Please try again.';
-                formMessage.style.display = 'block';
-                
-                // Scroll to message
-                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            } finally {
-                formLoading.classList.remove('active');
-                submitButton.disabled = false;
+                    // Hide previous messages
+                    formMessage.className = 'form-message';
+                    formMessage.style.display = 'none';
+                    formLoading.classList.add('active');
+                    submitButton.disabled = true;
+                    
+                    const formData = new FormData(form);
+                    
+                    try {
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            formMessage.className = 'form-message success';
+                            formMessage.textContent = 'Thank you! We\'ll be in touch soon with early access details.';
+                            formMessage.style.display = 'block';
+                            form.reset();
+                            
+                            // Scroll to message
+                            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        } else {
+                            const data = await response.json();
+                            throw new Error(data.error || 'Something went wrong. Please try again.');
+                        }
+                    } catch (error) {
+                        formMessage.className = 'form-message error';
+                        formMessage.textContent = error.message || 'Something went wrong. Please try again.';
+                        formMessage.style.display = 'block';
+                        
+                        // Scroll to message
+                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    } finally {
+                        formLoading.classList.remove('active');
+                        submitButton.disabled = false;
+                    }
+                });
             }
-        });
+        }
     </script>
 </body>
 </html>
