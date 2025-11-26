@@ -17,6 +17,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/buildLog-Logo.png">
     <meta name="theme-color" content="#007AFF">
     
+    <!-- Navigation Styles -->
+    <link rel="stylesheet" href="/nav.css">
+    
     <style>
         * {
             margin: 0;
@@ -139,18 +142,6 @@
             transform: translateY(-2px);
         }
         
-        .back-link {
-            display: inline-block;
-            color: #007AFF;
-            text-decoration: none;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-        
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        
         .meta {
             color: #999;
             font-size: 14px;
@@ -177,8 +168,8 @@
     </style>
 </head>
 <body>
+    <!-- Navigation loaded via nav.js -->
     <div class="container">
-        <a href="/blog/" class="back-link">← Back to Blog</a>
         
         <h1>Top 10 OSHA Violations and How Daily Logs Prevent Them (2025)</h1>
         <p class="meta">Published: January 2025 | Category: Safety & Compliance</p>
@@ -316,6 +307,9 @@
         <p>© 2025 BuildLog. All rights reserved.</p>
         <p><a href="mailto:support@buildlogapp.com">support@buildlogapp.com</a></p>
     </footer>
+
+    <!-- Navigation Script -->
+    <script src="/nav.js"></script>
 </body>
 </html>
 
