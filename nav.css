@@ -70,16 +70,27 @@
 
 .nav-dropdown {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 4px);
     left: 0;
     background: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     padding: 12px 0;
     min-width: 220px;
-    margin-top: 8px;
+    margin-top: 0;
     display: none;
     list-style: none;
+}
+
+/* Create an invisible bridge to prevent dropdown from closing when moving mouse */
+.nav-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: transparent;
 }
 
 .nav-item-dropdown:hover .nav-dropdown,
