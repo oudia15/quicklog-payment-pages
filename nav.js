@@ -24,7 +24,7 @@
                         </ul>
                     </li>
                     <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/#register" class="nav-cta">Get Started</a></li>
+                    <li><a href="/app" class="nav-cta">Launch App</a></li>
                 </ul>
             </div>
         </nav>
