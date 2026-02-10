@@ -17,10 +17,10 @@
                         <a href="/what-is-construction-daily-log.html">Resources</a>
                         <ul class="nav-dropdown">
                             <li><a href="/what-is-construction-daily-log.html">What is a Construction Daily Log?</a></li>
-                            <li><a href="/how-to-create-osha-compliant-daily-reports.html">OSHA-Compliant Daily Reports</a></li>
+                            <li><a href="/how-to-create-osha-compliant-daily-reports.html">Daily Reports & OSHA</a></li>
                             <li><a href="/construction-site-documentation-checklist.html">Documentation Checklist</a></li>
                             <li><a href="/best-practices-recording-site-activities.html">Best Practices</a></li>
-                            <li><a href="/construction-compliance-software-guide.html">Software Guide</a></li>
+                            <li><a href="/construction-compliance-software-guide.html">Daily Log Software Guide</a></li>
                         </ul>
                     </li>
                     <li><a href="/blog/">Blog</a></li>
