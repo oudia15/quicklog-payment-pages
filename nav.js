@@ -16,9 +16,9 @@
                     <li class="nav-item-dropdown">
                         <a href="/what-is-construction-daily-log.html">Resources</a>
                         <ul class="nav-dropdown">
-                            <li><a href="/what-is-construction-daily-log.html">What is a Construction Daily Log?</a></li>
-                            <li><a href="/how-to-create-osha-compliant-daily-reports.html">Daily Reports & OSHA</a></li>
-                            <li><a href="/construction-site-documentation-checklist.html">Documentation Checklist</a></li>
+                            <li><a href="/what-is-construction-daily-log.html">What Is a Daily Work Log?</a></li>
+                            <li><a href="/how-to-create-osha-compliant-daily-reports.html">Daily Reports & Regulations</a></li>
+                            <li><a href="/construction-site-documentation-checklist.html">Field Documentation Checklist</a></li>
                             <li><a href="/best-practices-recording-site-activities.html">Best Practices</a></li>
                             <li><a href="/construction-compliance-software-guide.html">Daily Log Software Guide</a></li>
                         </ul>
