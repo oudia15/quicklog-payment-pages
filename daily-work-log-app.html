@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Daily Work Log App for Construction & Field Teams | BuildLog</title>
+    <meta name="description" content="BuildLog is a daily work log app built for construction and field teams. Log by voice, text, or photos. Works offline. Syncs when you're back in range.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://buildlogapp.com/daily-work-log-app.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/buildLog-Logo ico 48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/buildLog-Logo ico 32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/buildLog-Logo ico 16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/buildLog-Logo.png">
+    <meta name="theme-color" content="#007AFF">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buildlogapp.com/daily-work-log-app.html">
+    <meta property="og:title" content="Daily Work Log App for Construction & Field Teams | BuildLog">
+    <meta property="og:description" content="BuildLog is a daily work log app built for construction and field teams. Log by voice, text, or photos. Works offline. Syncs when you're back in range.">
+    <meta property="og:image" content="https://buildlogapp.com/images/buildLog-Logo.png">
+    <meta property="og:image:width" content="1563">
+    <meta property="og:image:height" content="1563">
+    <meta property="og:site_name" content="BuildLog">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://buildlogapp.com/daily-work-log-app.html">
+    <meta name="twitter:title" content="Daily Work Log App for Construction & Field Teams | BuildLog">
+    <meta name="twitter:description" content="BuildLog is a daily work log app built for construction and field teams. Log by voice, text, or photos. Works offline. Syncs when you're back in range.">
+    <meta name="twitter:image" content="https://buildlogapp.com/images/buildLog-Logo.png">
+
+    <!-- Navigation Styles -->
+    <link rel="stylesheet" href="/nav.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 42px;
+            }
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+            color: #666;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin: 30px 0;
+        }
+
+        @media (min-width: 600px) {
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #007AFF;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
+            color: #333;
+            margin-bottom: 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: white;
+            color: #007AFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #f0f8ff;
+            transform: translateY(-2px);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 15px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .comparison-table td {
+            color: #666;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "BuildLog",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Daily work log app for construction and field teams. Log by voice, text, or photos. Works offline.",
+      "url": "https://buildlogapp.com/daily-work-log-app.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://buildlogapp.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Daily Work Log App",
+          "item": "https://buildlogapp.com/daily-work-log-app.html"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <noscript>
+        <div style="background:#007AFF;padding:12px 20px;text-align:center;">
+            <a href="/" style="color:#fff;text-decoration:none;font-weight:700;margin-right:24px;">BuildLog</a>
+            <a href="/#features" style="color:rgba(255,255,255,0.9);text-decoration:none;margin-right:16px;">Features</a>
+            <a href="/#faq" style="color:rgba(255,255,255,0.9);text-decoration:none;margin-right:16px;">FAQ</a>
+            <a href="/what-is-construction-daily-log.html" style="color:rgba(255,255,255,0.9);text-decoration:none;margin-right:16px;">Resources</a>
+            <a href="/blog/" style="color:rgba(255,255,255,0.9);text-decoration:none;margin-right:16px;">Blog</a>
+            <a href="/app" style="color:#fff;text-decoration:none;font-weight:600;">Launch App</a>
+        </div>
+    </noscript>
+    <!-- Navigation loaded via nav.js -->
+    <div class="container">
+
+        <h1>The Daily Work Log App Built for the Field</h1>
+
+        <p style="font-size: 18px; color: #444;">Your crew is on site. They have their phone. That should be enough to log what happened today. BuildLog makes it that simple.</p>
+
+        <p>Most daily log tools were designed for the office. They assume a desk, a stable connection, and time to fill in forms. But the people who actually see what happens on site are standing in mud, moving between trades, and working against the clock.</p>
+
+        <p>BuildLog is a daily work log app built for that reality. Talk, type, or snap photos to capture your day. It works without internet. It syncs when you're back in range. And it turns every entry into a clean, exportable report your team and clients can trust.</p>
+
+        <h2>Why Field Teams Need a Different Kind of Log App</h2>
+
+        <p>Paper logs get lost. Spreadsheets don't leave the trailer. Generic note-taking apps don't structure data for construction. And most "construction software" assumes you always have WiFi.</p>
+
+        <p>Field teams need something that:</p>
+
+        <ul>
+            <li><strong>Works offline</strong> — no signal on the job site shouldn't stop you from logging</li>
+            <li><strong>Takes 2 minutes, not 20</strong> — talk into your phone, add a photo, done</li>
+            <li><strong>Runs on any phone</strong> — no app store downloads required, works in the browser</li>
+            <li><strong>Keeps records safe</strong> — timestamped, geotagged, and stored securely</li>
+            <li><strong>Produces real reports</strong> — PDF and CSV exports for clients, inspectors, and your own records</li>
+        </ul>
+
+        <h2>How BuildLog Works</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Voice Logging</h3>
+                <p>Tap record, describe what happened, and BuildLog transcribes it into your daily report. Faster than typing, especially in the field.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Photo Documentation</h3>
+                <p>Attach photos directly from your camera. Each photo is automatically geotagged and timestamped for evidence-grade records.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Offline-First</h3>
+                <p>Everything saves locally to your phone first. When you're back in range, BuildLog syncs automatically. No work is ever lost.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Export Anywhere</h3>
+                <p>Generate PDF or CSV reports for clients, project managers, or inspectors. Professional, consistent, and ready to share.</p>
+            </div>
+        </div>
+
+        <h2>What a Daily Work Log Should Capture</h2>
+
+        <p>Whether you're a superintendent, foreman, or project manager, your daily log should answer these questions:</p>
+
+        <ol>
+            <li><strong>What work was done today?</strong> — Tasks completed, areas worked, progress made</li>
+            <li><strong>Who was on site?</strong> — Headcount, subcontractors, visitors</li>
+            <li><strong>What were the conditions?</strong> — Weather, access, any disruptions</li>
+            <li><strong>Were there any safety issues?</strong> — Hazards observed, near-misses, incidents</li>
+            <li><strong>What materials and equipment were used?</strong> — Deliveries, equipment hours, consumables</li>
+        </ol>
+
+        <p>A good daily log app makes capturing this information fast enough that it actually gets done every day — not just when someone remembers.</p>
+
+        <div class="highlight-box">
+            <p><strong>The 2-minute test:</strong> If your daily log takes more than 2 minutes to start, your field team won't use it consistently. BuildLog is designed around this constraint.</p>
+        </div>
+
+        <h2>Who Uses BuildLog</h2>
+
+        <ul>
+            <li><strong>Field supervisors</strong> logging daily progress from their phone</li>
+            <li><strong>General contractors</strong> tracking work across multiple sites</li>
+            <li><strong>Small construction companies</strong> (1-20 people) replacing paper logs</li>
+            <li><strong>Infrastructure and utility crews</strong> documenting field operations</li>
+            <li><strong>Renovation and remodeling teams</strong> keeping homeowners updated with real records</li>
+        </ul>
+
+        <h2>How BuildLog Compares</h2>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Paper Logs</th>
+                    <th>Generic Apps</th>
+                    <th>BuildLog</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Works offline</td>
+                    <td>Yes</td>
+                    <td>Sometimes</td>
+                    <td>Always</td>
+                </tr>
+                <tr>
+                    <td>Voice input</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Photo with GPS/time</td>
+                    <td>No</td>
+                    <td>Manual</td>
+                    <td>Automatic</td>
+                </tr>
+                <tr>
+                    <td>Structured reports</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>PDF & CSV</td>
+                </tr>
+                <tr>
+                    <td>Searchable history</td>
+                    <td>No</td>
+                    <td>Limited</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Time to log</td>
+                    <td>10-15 min</td>
+                    <td>5-10 min</td>
+                    <td>2 min</td>
+                </tr>
+                <tr>
+                    <td>Setup required</td>
+                    <td>None</td>
+                    <td>Download + config</td>
+                    <td>Open browser</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Built for Construction, Not Adapted From Something Else</h2>
+
+        <p>BuildLog isn't a generic note-taking app with a construction skin. It's purpose-built for the way field teams actually work:</p>
+
+        <ul>
+            <li><strong>Site-based organization</strong> — reports are grouped by site, not by date alone</li>
+            <li><strong>Draft and sync system</strong> — save locally, submit when ready, sync automatically</li>
+            <li><strong>PWA (Progressive Web App)</strong> — install on your home screen, no app store needed</li>
+            <li><strong>Works on any device</strong> — iPhone, Android, tablet, desktop</li>
+            <li><strong>Timestamped and geotagged</strong> — every entry is evidence-grade by default</li>
+        </ul>
+
+        <div class="cta-box">
+            <h3>Start Logging in 30 Seconds</h3>
+            <p>No download required. Open BuildLog in your browser and start capturing your day. It's that simple.</p>
+            <a href="/" class="button">Request Access</a>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Does BuildLog work without internet?</h3>
+        <p>Yes. BuildLog saves everything locally on your device first. When you reconnect, it syncs automatically. You'll never lose a report because of bad signal.</p>
+
+        <h3>Do I need to download anything?</h3>
+        <p>No. BuildLog is a Progressive Web App (PWA) that runs in your browser. You can add it to your home screen for an app-like experience, but there's nothing to install from an app store.</p>
+
+        <h3>Can I use voice to log?</h3>
+        <p>Yes. Tap the record button, describe what happened, and BuildLog transcribes it into a report entry. Most field supervisors find this faster than typing.</p>
+
+        <h3>What kind of reports can I export?</h3>
+        <p>BuildLog generates professional PDF and CSV reports that include all report details, photos, timestamps, and GPS coordinates. These are suitable for clients, inspectors, and internal records.</p>
+
+        <h3>How much does it cost?</h3>
+        <p>BuildLog offers a 30-day Pilot for teams evaluating the platform. Contact us to learn about pricing and get started.</p>
+
+        <h3>Is my data secure?</h3>
+        <p>Yes. All data is encrypted in transit using TLS. Server-side data is stored in a secure, access-controlled cloud database with automatic backups. Your device also retains a local copy for offline access.</p>
+
+        <h2>Related Resources</h2>
+
+        <ul>
+            <li><a href="/what-is-construction-daily-log.html">What Is a Daily Work Log? A Complete Guide</a></li>
+            <li><a href="/best-practices-recording-site-activities.html">Best Practices for Recording Site Activities</a></li>
+            <li><a href="/construction-site-documentation-checklist.html">Field Documentation Checklist: Free Template</a></li>
+            <li><a href="/blog/how-field-teams-capture-daily-logs-offline.html">How Field Teams Capture Daily Logs Offline</a></li>
+            <li><a href="/blog/paper-vs-digital-daily-logs.html">Paper vs Digital Daily Logs: Pros and Cons</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BuildLog. All rights reserved.</p>
+        <p><a href="mailto:support@buildlogapp.com">support@buildlogapp.com</a></p>
+    </footer>
+
+    <!-- Navigation Script -->
+    <script src="/nav.js"></script>
+</body>
+</html>

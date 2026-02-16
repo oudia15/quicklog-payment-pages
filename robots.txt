@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /app
 
 Sitemap: https://buildlogapp.com/sitemap.xml
 

@@ -1,0 +1,19 @@
+:8080 {
+    # Proxy /app requests to the Vite PWA (preserve /app prefix)
+    # Let nginx set cache headers per resource type — don't override here
+    handle /app* {
+        reverse_proxy http://buildlog.internal:3000 {
+            header_up Host {host}
+            transport http {
+                dial_timeout 30s
+                response_header_timeout 30s
+            }
+        }
+    }
+
+    # Serve landing static files for everything else
+    handle {
+        root * /srv
+        file_server
+    }
+}

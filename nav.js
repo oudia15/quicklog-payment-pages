@@ -16,6 +16,7 @@
                     <li class="nav-item-dropdown">
                         <a href="/what-is-construction-daily-log.html">Resources</a>
                         <ul class="nav-dropdown">
+                            <li><a href="/daily-work-log-app.html">Daily Work Log App</a></li>
                             <li><a href="/what-is-construction-daily-log.html">What Is a Daily Work Log?</a></li>
                             <li><a href="/how-to-create-osha-compliant-daily-reports.html">Daily Reports & Regulations</a></li>
                             <li><a href="/construction-site-documentation-checklist.html">Field Documentation Checklist</a></li>
